@@ -16,6 +16,10 @@ describe('CounterComponent', () => {
     fixture.detectChanges();
   })
 
+  it('should be create', () => {
+    expect(component).toBeTruthy();
+  })
+
   it('should have initial count of 0', () => {
     expect(component.count).toBe(0);
   })
