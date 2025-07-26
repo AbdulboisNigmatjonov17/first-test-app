@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CounterService } from '../services/counter/counter.service';
 
 @Component({
   selector: 'app-counter',
@@ -8,13 +9,14 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class Counter {
+  private counterService = inject(CounterService);
   count = 0;
 
-  increment() {
-    this.count++;
+  onIncrement() {
+    this.count = this.counterService.increment();
   }
 
-  decrement() {
-    this.count--;
+  onDecrement() {
+    this.count = this.counterService.decrement();
   }
 }
