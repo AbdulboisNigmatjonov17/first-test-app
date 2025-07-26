@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Counter } from './counter/counter';
+import { Parent } from "./components/parent/parent";
 
 @Component({
   selector: 'app-root',
-  imports: [Counter],
+  imports: [Parent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
